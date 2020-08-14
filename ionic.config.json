@@ -1,0 +1,7 @@
+{
+  "name": "wez-parasol",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
