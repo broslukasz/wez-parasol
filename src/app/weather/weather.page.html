@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <div id="container" *ngIf="rainProbability">
+    <ion-item lines="none">
+      <div class="parasol-image-center">
+        <ion-img [src]="'assets/umbrella-150.png'"></ion-img>
+      </div>
+    </ion-item>
+
+    <strong class="capitalize">
+      <span>{{ rainStatus }}</span>
+      <span>({{rainProbability}}%)</span>
+      <span *ngIf="rainProbability > 0"> za {{hoursToRain}}h</span>
+    </strong>
+    <p> {{ rainCommand }}</p>
+  </div>
+</ion-content>

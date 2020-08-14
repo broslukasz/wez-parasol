@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FolderPageRoutingModule } from './folder-routing.module';
+import { WeatherPageRoutingModule } from './weather-routing.module';
 
-import { FolderPage } from './folder.page';
+import { WeatherPage } from './weather-page.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule
+    WeatherPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [WeatherPage]
 })
-export class FolderPageModule {}
+export class WeatherPageModule {}
