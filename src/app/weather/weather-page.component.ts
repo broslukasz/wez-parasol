@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './weather.service';
-import { WeatherbitForecastData, WeatherbitHourlyForecast } from '../Models/forecast';
+import { WeatherbitForecastData, WeatherbitHourlyForecast } from '../models/forecast';
 
 @Component({
   selector: 'app-weather',
@@ -20,6 +20,13 @@ export class WeatherPage implements OnInit {
   ngOnInit() {
     this.weatherService.getForecastForCurrentLocation().subscribe((forecast: WeatherbitHourlyForecast) => {
       this.announceRainStatus(forecast.data);
+    } );
+  }
+
+  doRefresh(refresher) {
+    this.weatherService.getForecastForCurrentLocation().subscribe((forecast: WeatherbitHourlyForecast) => {
+      this.announceRainStatus(forecast.data);
+      refresher.target.complete();
     } );
   }
 

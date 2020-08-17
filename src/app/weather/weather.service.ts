@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { from, Observable } from 'rxjs';
 import { first, mergeMap } from 'rxjs/operators';
-import { WeatherbitHourlyForecast } from '../Models/forecast';
+import { WeatherbitHourlyForecast } from '../models/forecast';
 
 interface Coordinates {
   readonly accuracy: number;
