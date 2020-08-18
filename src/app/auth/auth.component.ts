@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
 import * as firebaseui from 'firebaseui';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-auth',
@@ -14,11 +15,12 @@ export class AuthComponent implements OnInit {
 
     constructor(
         private authService: AuthService,
+        private router: Router,
     ) {
     }
 
     ngOnInit() {
-        const uiConfig = {
+        const uiConfig: firebaseui.auth.Config = {
             signInOptions: [
                 firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                 firebase.auth.EmailAuthProvider.PROVIDER_ID,
@@ -35,7 +37,7 @@ export class AuthComponent implements OnInit {
     }
 
     private onLoginSuccessfull() {
-
+        this.router.navigate(['/weather/forecast']);
     }
 
 }

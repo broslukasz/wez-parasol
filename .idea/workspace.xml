@@ -58,7 +58,7 @@
       <workItem from="1597657575617" duration="1054000" />
       <workItem from="1597665544030" duration="1270000" />
       <workItem from="1597674637271" duration="3058000" />
-      <workItem from="1597736260208" duration="11588000" />
+      <workItem from="1597736260208" duration="12607000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1597391158349</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597748342027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="firebase ui - single instance">
+      <created>1597752113786</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1597752113786</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,13 +148,14 @@
     <MESSAGE value="menu - correction" />
     <MESSAGE value="back - button" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="firebase ui - single instance" />
+    <option name="LAST_COMMIT_MESSAGE" value="firebase ui - single instance" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2" timestamp="1597748341922">
+    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2" timestamp="1597752113748">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597748341922" />
+    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597752113748" />
     <state x="534" y="99" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1597403051841" />
     <state x="2024" y="103" width="1713" height="875" key="DiffContextDialog" timestamp="1597751607768">
       <screen x="1920" y="0" width="1920" height="1080" />
