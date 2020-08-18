@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "wez-parasol"
+  },
+  "targets": {
+    "wez-parasol": {
+      "hosting": {
+        "app": [
+          "wez-parasol"
+        ]
+      }
+    }
   }
 }
