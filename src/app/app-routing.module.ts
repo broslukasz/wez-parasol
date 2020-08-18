@@ -8,16 +8,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule)
+    path: 'weather/:id',
+    loadChildren: () => import('./weather/weather.module').then(m => m.WeatherPageModule)
   },
   {
     path: 'account',
     loadChildren: () => import('./weather/weather.module').then(m => m.WeatherPageModule)
   },
   {
-    path: 'weather/:id',
-    loadChildren: () => import('./weather/weather.module').then(m => m.WeatherPageModule)
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthPageModule)
   },
 ];
 
