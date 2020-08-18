@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
 import * as firebaseui from 'firebaseui';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthService } from './auth.service';
 
 @Component({
     selector: 'app-auth',
@@ -13,7 +13,7 @@ export class AuthComponent implements OnInit {
     ui: firebaseui.auth.AuthUI;
 
     constructor(
-        private afAuth: AngularFireAuth,
+        private authService: AuthService,
     ) {
     }
 
@@ -29,7 +29,7 @@ export class AuthComponent implements OnInit {
             }
         };
 
-        this.ui = new firebaseui.auth.AuthUI(this.afAuth.auth);
+        this.ui = this.authService.getFirebaseUI();
 
         this.ui.start('#firebaseui-auth-container', uiConfig);
     }
