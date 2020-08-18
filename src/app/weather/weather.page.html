@@ -1,9 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher>
 
-  <div id="container" *ngIf="rainProbability">
+  <div id="container" *ngIf="rainProbability >= 0">
     <ion-item lines="none">
       <div class="parasol-image-center">
         <ion-img [src]="'assets/umbrella-150.png'"></ion-img>

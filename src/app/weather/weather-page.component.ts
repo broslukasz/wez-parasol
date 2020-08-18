@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './weather.service';
 import { WeatherbitForecastData, WeatherbitHourlyForecast } from '../models/forecast';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-weather',
@@ -12,8 +13,10 @@ export class WeatherPage implements OnInit {
   rainCommand: string;
   rainProbability: number;
   hoursToRain: number;
+  headerText: string;
 
   constructor(
+      private activatedRoute: ActivatedRoute,
       private weatherService: WeatherService,
   ) { }
 
