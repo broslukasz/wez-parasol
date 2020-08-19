@@ -16,10 +16,17 @@
           </ng-container>
         </ion-list>
 
-        <ion-menu-toggle auto-hide="false">
+        <ion-menu-toggle auto-hide="false" *ngIf="!loggedIn">
           <ion-item routerDirection="root" [routerLink]="[logInAction.url]" lines="none" detail="false">
             <ion-icon slot="start" [ios]="logInAction.icon + '-outline'" [md]="logInAction.icon + '-sharp'"></ion-icon>
             <ion-label>{{ logInAction.title }}</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle auto-hide="false" *ngIf="loggedIn">
+          <ion-item routerDirection="root" [routerLink]="[logOutAction.url]" (click)="logOut()" lines="none" detail="false">
+            <ion-icon slot="start" [ios]="logOutAction.icon + '-outline'" [md]="logOutAction.icon + '-sharp'"></ion-icon>
+            <ion-label>{{ logOutAction.title }}</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-content>
