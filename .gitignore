@@ -66,3 +66,6 @@ node_modules/
 
 # prod
 www/
+
+# webstorm
+workspace.xml

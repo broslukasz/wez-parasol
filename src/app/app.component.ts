@@ -4,6 +4,8 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +13,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
     styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-    loggedIn = false;
     selectedIndex = 0;
     appPages = [
         {
@@ -33,6 +34,8 @@ export class AppComponent implements OnInit {
         icon: 'log-out'
     };
 
+    private isLoggedIn$: Observable<boolean>;
+
     constructor(
         private platform: Platform,
         private splashScreen: SplashScreen,
@@ -43,9 +46,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.afAuth.authState.subscribe(authState => {
-            this.loggedIn = !!authState;
-        });
+        this.isLoggedIn$ = this.afAuth.authState.pipe(map(user => !!user));
     }
 
     initializeApp() {
