@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-avatar class="user-avatar" slot="end" *ngIf="(pictureUrl$ | async) as pictureUrl">
+      <img [src]="pictureUrl" alt="user-avatar">
+    </ion-avatar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="in-the-middle">
+    <ion-label>{{(email$ | async)}}</ion-label>
+  </div>
+</ion-content>

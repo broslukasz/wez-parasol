@@ -6,7 +6,7 @@
           <ion-list-header>Menu</ion-list-header>
           <ion-note></ion-note>
 
-          <ng-container *ngIf="false">
+          <ng-container *ngIf="isLoggedIn$ | async">
             <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
               <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
                 <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
@@ -24,7 +24,7 @@
         </ion-menu-toggle>
 
         <ion-menu-toggle auto-hide="false" *ngIf="isLoggedIn$ | async">
-          <ion-item routerDirection="root" [routerLink]="[logOutAction.url]" (click)="logOut()" lines="none" detail="false">
+          <ion-item routerDirection="root" [button]="isLoggedIn$" (click)="logOut()" lines="none" detail="false">
             <ion-icon slot="start" [ios]="logOutAction.icon + '-outline'" [md]="logOutAction.icon + '-sharp'"></ion-icon>
             <ion-label>{{ logOutAction.title }}</ion-label>
           </ion-item>

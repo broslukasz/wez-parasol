@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { first, map } from 'rxjs/operators';
+import { from, Observable } from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
 
     logOutAction = {
         title: 'Wyloguj',
-        url: '/',
         icon: 'log-out'
     };
 
@@ -40,7 +39,8 @@ export class AppComponent implements OnInit {
         private platform: Platform,
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
-        private afAuth: AngularFireAuth
+        private afAuth: AngularFireAuth,
+        private nav: NavController,
     ) {
         this.initializeApp();
     }
@@ -57,6 +57,7 @@ export class AppComponent implements OnInit {
     }
 
     logOut() {
-        this.afAuth.auth.signOut();
+        from(this.afAuth.auth.signOut()).pipe(first())
+            .subscribe(() => this.nav.navigateRoot('/weather/forecast'));
     }
 }

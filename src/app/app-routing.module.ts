@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'account',
-    loadChildren: () => import('./weather/weather.module').then(m => m.WeatherPageModule)
+    loadChildren: () => import('./account/account.module').then(m => m.AccountPageModule)
   },
   {
     path: 'auth',
