@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a0a7f76-50a6-4b94-92e8-9bbfa7ae063d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/weather/weather.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/weather/weather.page.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -59,7 +64,8 @@
       <workItem from="1597665544030" duration="1270000" />
       <workItem from="1597674637271" duration="3058000" />
       <workItem from="1597736260208" duration="13155000" />
-      <workItem from="1597834043803" duration="2685000" />
+      <workItem from="1597834043803" duration="3109000" />
+      <workItem from="1597837192353" duration="615000" />
     </task>
     <task id="LOCAL-00001" summary="git ignore">
       <created>1597391158349</created>
@@ -180,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597836687468</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="logged in variable">
+      <created>1597836741312</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1597836741312</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +203,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/wez-parasol" />
+    </ignored-roots>
     <MESSAGE value="git ignore" />
     <MESSAGE value="base functionality" />
     <MESSAGE value="refresher" />
@@ -210,10 +226,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="289" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597835210955" />
-    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2" timestamp="1597836687415">
+    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2" timestamp="1597836741270">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597836687415" />
+    <state x="2402" y="74" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597836741270" />
     <state x="534" y="99" width="912" height="916" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1597403051841" />
     <state x="2024" y="103" width="1713" height="875" key="DiffContextDialog" timestamp="1597836680461">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -225,6 +241,14 @@
     </state>
     <state x="2655" y="291" key="FileChooserDialogImpl/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597675265402" />
     <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1597402667616" />
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor" timestamp="1597837216765">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="175" width="1022" height="737" key="SettingsEditor/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597837216765" />
+    <state x="2747" y="454" width="256" height="178" key="VCS.EditChangelistDialog" timestamp="1597836751683">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2747" y="454" width="256" height="178" key="VCS.EditChangelistDialog/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597836751683" />
     <state x="2460" y="269" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1597836317051">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -253,10 +277,10 @@
     </state>
     <state x="2531" y="231" key="run.anything.popup/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597736678142" />
     <state x="659" y="252" key="run.anything.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1597400097146" />
-    <state x="2530" y="238" width="698" height="696" key="search.everywhere.popup" timestamp="1597836702451">
+    <state x="2530" y="238" width="698" height="696" key="search.everywhere.popup" timestamp="1597836759353">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2530" y="238" width="698" height="696" key="search.everywhere.popup/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597836702451" />
+    <state x="2530" y="238" width="698" height="696" key="search.everywhere.popup/70.27.1850.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1597836759353" />
     <state x="658" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1597403854051" />
     <state x="2605" y="371" width="540" height="344" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597742188307">
       <screen x="1920" y="0" width="1920" height="1080" />

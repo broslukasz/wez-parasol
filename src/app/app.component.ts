@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
         icon: 'log-out'
     };
 
-    private isLoggedIn$: Observable<boolean>;
+    isLoggedIn$: Observable<boolean>;
 
     constructor(
         private platform: Platform,

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherService } from './weather.service';
 import { WeatherbitForecastData, WeatherbitHourlyForecast } from '../models/forecast';
 import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-weather',
@@ -14,16 +17,20 @@ export class WeatherPage implements OnInit {
   rainProbability: number;
   hoursToRain: number;
   headerText: string;
+  pictureUrl$: Observable<string>;
 
   constructor(
       private activatedRoute: ActivatedRoute,
       private weatherService: WeatherService,
+      private afAuth: AngularFireAuth
   ) { }
 
   ngOnInit() {
     this.weatherService.getForecastForCurrentLocation().subscribe((forecast: WeatherbitHourlyForecast) => {
       this.announceRainStatus(forecast.data);
-    } );
+    });
+
+    this.pictureUrl$ = this.afAuth.authState.pipe(map(user => user ? user.photoURL : null));
   }
 
   doRefresh(refresher) {
