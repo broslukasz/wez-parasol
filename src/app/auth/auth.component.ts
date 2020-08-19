@@ -1,8 +1,8 @@
 import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import * as firebase from 'firebase/app';
 import * as firebaseui from 'firebaseui';
-import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-auth',
@@ -14,9 +14,9 @@ export class AuthComponent implements OnInit, OnDestroy {
     ui: firebaseui.auth.AuthUI;
 
     constructor(
-        private router: Router,
         private ngZone: NgZone,
         private afAuth: AngularFireAuth,
+        private nav: NavController,
     ) {
     }
 
@@ -43,7 +43,7 @@ export class AuthComponent implements OnInit, OnDestroy {
 
     private onLoginSuccessfull() {
         this.ngZone.run(() => {
-            this.router.navigate(['/weather/forecast']);
+            this.nav.navigateRoot('/weather/forecast');
         });
     }
 
