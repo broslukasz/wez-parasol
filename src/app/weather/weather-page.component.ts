@@ -22,7 +22,7 @@ export class WeatherPage implements OnInit {
   constructor(
       private activatedRoute: ActivatedRoute,
       private weatherService: WeatherService,
-      private afAuth: AngularFireAuth
+      private afAuth: AngularFireAuth,
   ) { }
 
   ngOnInit() {

@@ -13,5 +13,8 @@
 <ion-content [fullscreen]="true">
   <div class="in-the-middle">
     <ion-label>{{(email$ | async)}}</ion-label>
+    <div>
+      <ion-button class="delete-button" color="danger" (click)="deleteAccount()">Delete Account</ion-button>
+    </div>
   </div>
 </ion-content>

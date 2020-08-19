@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { first, map } from 'rxjs/operators';
 import { from, Observable } from 'rxjs';
+import { AuthService } from './auth/auth.service';
 
 @Component({
     selector: 'app-root',
@@ -41,11 +42,16 @@ export class AppComponent implements OnInit {
         private statusBar: StatusBar,
         private afAuth: AngularFireAuth,
         private nav: NavController,
+        private authService: AuthService,
     ) {
         this.initializeApp();
     }
 
     ngOnInit() {
+        this.authService.watchAuthState$.subscribe(() => {
+            this.isLoggedIn$ = this.afAuth.authState.pipe(map(user => !!user));
+        });
+
         this.isLoggedIn$ = this.afAuth.authState.pipe(map(user => !!user));
     }
 
